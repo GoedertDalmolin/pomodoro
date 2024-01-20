@@ -29,12 +29,18 @@ class EntradaTempo extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: decrement, child: const Icon(Icons.arrow_downward)),
+            ElevatedButton(
+              onPressed: decrement,
+              child: const Icon(Icons.arrow_downward),
+            ),
             Text(
               '${valor.toString()} min',
               style: const TextStyle(fontSize: 18),
             ),
-            ElevatedButton(onPressed: increment, child: const Icon(Icons.arrow_upward)),
+            ElevatedButton(
+              onPressed: increment,
+              child: const Icon(Icons.arrow_upward),
+            ),
           ],
         ),
       ],
