@@ -12,8 +12,12 @@ class CronometroBotao extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return ElevatedButton(
-      style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20), textStyle: TextStyle(fontSize: 25)),
+      style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        textStyle: const TextStyle(fontSize: 25),
+      ),
       onPressed: () {},
       child: Row(
         children: [
