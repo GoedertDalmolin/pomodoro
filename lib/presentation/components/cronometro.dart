@@ -11,60 +11,62 @@ class Cronometro extends StatelessWidget {
   Widget build(BuildContext context) {
     final store = Provider.of<PomodoroStore>(context);
 
-    return Container(
-      color: Colors.red,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            'Hora de Trabalhar',
-            // textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 40, color: Colors.white),
-          ),
-          const SizedBox(height: 20),
-          Text(
-            '${store.minutos.toString().padLeft(2, '0')}:${store.segundos.toString().padLeft(2, '0')}',
-            style: const TextStyle(
-              fontSize: 120,
-              color: Colors.white,
-            ),
-          ),
-          const SizedBox(height: 20),
-          Observer(builder: (_) {
-            return Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                if (!store.iniciado)
-                  Padding(
+    return Observer(
+      builder: (_) {
+        return Container(
+          color: store.estaTrabalhando() ? Colors.red : Colors.green,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                store.estaTrabalhando() ? 'Hora de Trabalhar' : 'Hora de Descansar',
+                // textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 40, color: Colors.white),
+              ),
+              const SizedBox(height: 20),
+              Text(
+                '${store.minutos.toString().padLeft(2, '0')}:${store.segundos.toString().padLeft(2, '0')}',
+                style: const TextStyle(
+                  fontSize: 120,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  if (!store.iniciado)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: CronometroBotao(
+                        texto: 'Iniciar',
+                        icone: Icons.play_arrow,
+                        onClick: store.iniciarContagem,
+                      ),
+                    ),
+                  if (store.iniciado)
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: CronometroBotao(
+                        texto: 'Parar',
+                        icone: Icons.stop,
+                        onClick: store.pararContagem,
+                      ),
+                    ),
+                   Padding(
                     padding: const EdgeInsets.only(right: 10.0),
                     child: CronometroBotao(
-                      texto: 'Iniciar',
-                      icone: Icons.play_arrow,
-                      onClick: store.iniciarContagem,
+                      texto: 'Reiniciar',
+                      icone: Icons.refresh,
+                      onClick: store.reiniciarContagem,
                     ),
                   ),
-                if (store.iniciado)
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: CronometroBotao(
-                      texto: 'Parar',
-                      icone: Icons.stop,
-                      onClick: store.pararContagem,
-                    ),
-                  ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 10.0),
-                  child: CronometroBotao(
-                    texto: 'Reiniciar',
-                    icone: Icons.refresh,
-                    // onClick: store.pararContagem,
-                  ),
-                ),
-              ],
-            );
-          })
-        ],
-      ),
+                ],
+              )
+            ],
+          ),
+        );
+      }
     );
   }
 }
