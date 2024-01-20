@@ -8,9 +8,9 @@ class PomodoroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pomodoro'),
-      ),
+      // appBar: AppBar(
+      //   title: const Text('Pomodoro'),
+      // ),
       body: const Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
