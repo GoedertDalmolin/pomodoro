@@ -27,10 +27,10 @@ Construido utilizando Mobx e Provider.
 ---
 ## 👁️ Pré-visualização
 <h1 align="center">
-    <img src="github/1.png" width="25%">
-    <img src="github/2.png" width="25%">
-    <img src="github/3.png" width="25%">
-    <img src="github/4.png" width="25%">
+    <img src=".github/1.png" width="25%">
+    <img src=".github/2.png" width="25%">
+    <img src=".github/3.png" width="25%">
+    <img src=".github/4.png" width="25%">
 </h1>
 
 ---
