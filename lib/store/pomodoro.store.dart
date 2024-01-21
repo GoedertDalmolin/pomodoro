@@ -70,9 +70,11 @@ abstract class PomodoroStoreBase with Store {
 
   @action
   decrementarTempoTrabalho() {
-    tempoTrabalho--;
-    if (estaTrabalhando()) {
-      reiniciarContagem();
+    if (tempoTrabalho > 1) {
+      tempoTrabalho--;
+      if (estaTrabalhando()) {
+        reiniciarContagem();
+      }
     }
   }
 
@@ -86,9 +88,11 @@ abstract class PomodoroStoreBase with Store {
 
   @action
   decrementarTempoDescanso() {
-    tempoDescanso--;
-    if (estaDescansando()) {
-      reiniciarContagem();
+    if (tempoDescanso > 1) {
+      tempoDescanso--;
+      if (estaDescansando()) {
+        reiniciarContagem();
+      }
     }
   }
 
