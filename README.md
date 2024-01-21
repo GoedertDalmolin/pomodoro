@@ -1,6 +1,6 @@
 ---
 
-## Pomodoro App (Em Progresso)
+## Pomodoro App
 
 ---
 
@@ -8,24 +8,29 @@
 
 **Language:**
 
-[![Portuguese](https://img.shields.io/badge/Language-Português-blue?style=for-the-badge)](README.md)
+[![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](README.md)
+[![Portuguese](https://img.shields.io/badge/Language-Português-blueviolet?style=for-the-badge)](README.pt-br.md)
 
 </div>
 
 ---
-## ℹ️ Sobre este repositório
-Aplicativo mobile para execução da técnica pomoro.
+## ℹ️ About this repository
+Mobile application for performing the pomodoro technique.
 
-O objetivo principal deste repositório é demonstrar o aplicativo desenvolvido para treinar meus conhecimentos durante o curso de Flutter da empresa [COD3R](https://www.udemy.com/course/curso-flutter/).
+his repository's main objective is to demonstrate the application developed to train my knowledge during the Flutter course from the company [COD3R](https://www.udemy.com/course/curso-flutter/).
 
-Construido utilizando Mobx e Provider.
-
----
-## ⚙️ Funcionalidades
-(Em breve)
+Built with Flutter using the Mobx and Provider packages.
 
 ---
-## 👁️ Pré-visualização
+## ⚙️ Features
+
+- Monitor work pace and focus.
+- Monitor rest time after performing a job.
+- It is possible to manually configure the work and rest time with the pomodoro running.
+- Pause and restart the pomodoro if necessary.
+
+---
+## 👁️ Preview
 <h1 align="center">
     <img src=".github/1.png" width="35%">
     <img src=".github/2.png" width="35%">
@@ -36,8 +41,8 @@ Construido utilizando Mobx e Provider.
 </h1>
 
 ---
-## 🧪 Tecnologias
-Este projeto foi desenvolvido usando as seguintes tecnologias:
+## 🧪 Technologies
+This project was developed using the following technologies:
 
 - [Flutter 3.16.8](https://docs.flutter.dev/)
 - [Dart 3.2.4](https://dart.dev/)
@@ -49,21 +54,21 @@ Este projeto foi desenvolvido usando as seguintes tecnologias:
 - [Provider](https://pub.dev/packages/provider)
 
 ---
-## ⚡ Instalação
+## ⚡ Installation
 
-Primeiramente clone este projeto usando:
+First clone this project using:
 
 ```bash
   git clone https://github.com/GoedertDalmolin/pomodoro.git
   cd pomodoro
 ```
 
-Por fim, com o flutter instalado em sua maquina, execute o seguinte comando:
+Finally, with flutter installed on your machine, run the following command:
 
 ```bash
   flutter run
 ```
 
 ---
-</> Desenvolvido por [GoedertDalmolin](https://github.com/GoedertDalmolin) 👋
+</> Developed by [GoedertDalmolin](https://github.com/GoedertDalmolin) 👋
 ---
